@@ -129,6 +129,15 @@ Node* DFS(Node* initial, int* cont){
         Node* current = top(S); 
         pop(S);         
         (*cont)++;
+        if(is_final(current)) {
+            return current;
+        }
+        List* adj = get_adj_nodes(current);
+        Node* adjNode = first(adj);
+        while(adjNode != NULL) {
+            push(S, adjNode);
+            adjNode = next(adj);            
+        }
   }
   return NULL;
 }
