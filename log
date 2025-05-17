@@ -33,3 +33,14 @@ Sat, May 17, 2025 12:54:35 AM:
  tests:  7|1
 total_score: 55/70
 ae9ef9d
+Sat, May 17, 2025  4:28:31 AM: 
+ sudoku.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:129:15: error: unused variable 'current' [-Werror=unused-variable]
+         Node* current = top(S);
+               ^~~~~~~
+cc1.exe: all warnings being treated as errors
+f924a07
