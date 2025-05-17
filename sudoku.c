@@ -49,10 +49,10 @@ int is_valid(Node* n){
    for(i = 0; i < 9; i++){
       int aparecido[10] = {0};
       for(j = 0; j < 9; j++){
-         int val = n->sudo[i][j];
-         if(val != 0){
-            if(aparecido[val]) return 0;
-            aparecido[val] = 1;
+         int valor = n->sudo[i][j];
+         if(valor != 0){
+            if(aparecido[valor]) return 0;
+            aparecido[valor] = 1;
          }
       }
    }
@@ -60,10 +60,10 @@ int is_valid(Node* n){
    for(j = 0; j < 9; j++){
       int aparecido[10] = {0};
       for(i = 0; i < 9; i++){
-         int val = n->sudo[i][j];
-         if(val != 0){
-            if(aparecido[val]) return 0;
-            aparecido[val] = 1;
+         int valor = n->sudo[i][j];
+         if(valor != 0){
+            if(aparecido[valor]) return 0;
+            aparecido[valor] = 1;
          }
       }
    }
@@ -73,14 +73,13 @@ int is_valid(Node* n){
       for(int p = 0; p < 9; p++){
          int i = 3*(k/3) + (p/3);
          int j = 3*(k%3) + (p%3);
-         int val = n->sudo[i][j];
-         if(val != 0){
-            if(aparecido[val]) return 0;
-            aparecido[val] = 1;
+         int valor = n->sudo[i][j];
+         if(valor != 0){
+            if(aparecido[valor]) return 0;
+            aparecido[valor] = 1;
          }
       }
    }
-
    return 1;
 }
 
